@@ -35,13 +35,21 @@ set(PROJECT_LIBS ${PROJECT_LIBS};) # Linux
 ###################
 # Add main Target #
 ###################
-
 set(MAIN_SRC
 	main.cpp
+
+	A440.c
+	musical_utils.c
+
+	audiosink.cpp
+	streaming_interface.cpp
+
+	blocks/ossilator.cpp
 )
 
 message("PROJECT_LIBS: ${PROJECT_LIBS}")
 message("INCLUDE_DIRS: ${INCLUDE_DIRS}")
+message("PROJECT_SRCS: ${MAIN_SRC}")
 
 add_executable(main ${MAIN_SRC})
 target_link_libraries(main ${PROJECT_LIBS})
