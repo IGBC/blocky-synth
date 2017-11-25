@@ -7,7 +7,10 @@ int main(int argc, char *argv[])
       "org.gtkmm.examples.base");
 
   Gtk::Window window;
-  window.set_default_size(200, 200);
-
+  window.set_default_size(640, 480);
+  Gtk::GLArea gl;
+  window.add(gl);
+  
+  
   return app->run(window);
 }

@@ -29,7 +29,7 @@ set(INCLUDE_DIRS "${INCLUDE_DIRS};${CMAKE_CURRENT_SOURCE_DIR}/include")
 ########################
 # Set Libraries to Use #
 ########################
-set(PROJECT_LIBS gtkmm;${PROJECT_LIBS};) # Linux
+set(PROJECT_LIBS ${PROJECT_LIBS};) # Linux
 
 
 ###################
@@ -37,6 +37,14 @@ set(PROJECT_LIBS gtkmm;${PROJECT_LIBS};) # Linux
 ###################
 set(MAIN_SRC
 	main.cpp
+
+	A440.c
+	musical_utils.c
+
+	audiosink.cpp
+	streaming_interface.cpp
+
+	blocks/ossilator.cpp
 )
 
 message("PROJECT_LIBS: ${PROJECT_LIBS}")
